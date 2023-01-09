@@ -1,12 +1,12 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import PokemonList from "./components/PokemonList";
+import Views from "./components/Views";
 const queryClient = new QueryClient();
 
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <PokemonList />
+        <Views />
       </div>
     </QueryClientProvider>
   );

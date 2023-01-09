@@ -24,8 +24,6 @@ export default function Pokemon({ pokemon }) {
     (pokemon) => pokemon.language.name === "zh-Hant"
   );
 
-  console.log(name);
-
   return (
     <li>
       <img src={img} alt={name} />
