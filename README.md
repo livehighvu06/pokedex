@@ -6,10 +6,14 @@
 
 ### Hook
 ```
-useState , useEffect , useQuery
+useQuery
 ```
 
 ### API
 ```
 https://pokeapi.co/
 ```
+
+### 參考資料
+[Fix: No QueryClient set, use QueryClientProvider to set one](https://dev.to/calvin087/fix-no-queryclient-set-use-queryclientprovider-to-set-one-2hlb)
+
