@@ -23,6 +23,7 @@ export default function Pokemon({ pokemon }) {
   const { name } = pokemonSpecies.names.find(
     (pokemon) => pokemon.language.name === "zh-Hant"
   );
+
   console.log(name);
 
   return (
