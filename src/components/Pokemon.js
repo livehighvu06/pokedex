@@ -28,28 +28,42 @@ export default function Pokemon({ pokemon }) {
   const { id, types } = pokemonData;
   const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 
+  console.log(pokemonData);
   const color = getColor(types[0].type.name);
   const gradient = types.map((type) => getColor(type.type.name)).join(", ");
-  const { name } = pokemonSpecies.names.find(
-    (pokemon) => pokemon.language.name === "zh-Hant"
-  );
+  const getInfo = (target) => {
+    return target.find((pokemon) => pokemon.language.name === "zh-Hant");
+  };
+  const { name } = getInfo(pokemonSpecies.names);
+  const { genus } = getInfo(pokemonSpecies.genera);
+
   const handleClick = () => {
     setShowCard(true);
   };
   const onClose = () => {
     setShowCard(false);
   };
-  const Modal = <Card name={name} img={img} onClose={onClose} />;
+  const bgImage = {
+    backgroundColor: color,
+    backgroundImage: `linear-gradient(45deg, ${gradient})`,
+  };
+  const Modal = (
+    <Card
+      name={name}
+      img={img}
+      genus={genus}
+      types={types}
+      onClose={onClose}
+      bgImage={bgImage}
+    />
+  );
   return (
     isSuccess &&
     speciesIsSuccess && (
       <>
         <li
           className="p-6 border-2 rounded-lg cursor-pointer"
-          style={{
-            backgroundColor: color,
-            backgroundImage: `linear-gradient(45deg, ${gradient})`,
-          }}
+          style={bgImage}
           onClick={handleClick}
         >
           <img className="mx-auto w-60" src={img} alt={name} />
