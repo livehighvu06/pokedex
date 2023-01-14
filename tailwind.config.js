@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        pokemon: "repeat(auto-fill,minmax(250px,1fr))",
+        pokemon: "repeat(auto-fill,minmax(150px,1fr))",
       },
     },
   },

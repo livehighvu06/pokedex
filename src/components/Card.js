@@ -13,7 +13,7 @@ function Card({ name, img, onClose, bgImage, types, genus }) {
         onClick={onClose}
       ></div>
       <div
-        className="fixed flex flex-col justify-between top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-auto text-white p-6 md:p-10 bg-white border-4 rounded-lg opacity-100 shadow-md"
+        className="pokemon fixed flex flex-col justify-between top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-auto text-white p-6 md:p-10 bg-white border-4 rounded-lg opacity-100 shadow-md"
         style={bgImage}
       >
         <div className="rounded-full -mt-20 mb-6 bg-white border-8 shadow-md">

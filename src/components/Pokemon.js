@@ -28,7 +28,6 @@ export default function Pokemon({ pokemon }) {
   const { id, types } = pokemonData;
   const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 
-  console.log(pokemonData);
   const color = getColor(types[0].type.name);
   const gradient = types.map((type) => getColor(type.type.name)).join(", ");
   const getInfo = (target) => {
@@ -62,7 +61,7 @@ export default function Pokemon({ pokemon }) {
     speciesIsSuccess && (
       <>
         <li
-          className="p-6 border-2 rounded-lg cursor-pointer"
+          className="p-6 border-2 rounded-lg cursor-pointer md:grayscale hover:grayscale-0 transition duration-300"
           style={bgImage}
           onClick={handleClick}
         >
