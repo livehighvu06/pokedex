@@ -1,20 +1,19 @@
-# 你的寶可夢，我的神奇寶貝
+# 你的寶可夢，我的神奇寶貝 - Pokedex
 
-## 筆記一下
+<div align="center">
+  <img src="https://i.imgur.com/AN3mLed.jpg" width="750" />
+</div>
 
-期待的完全體應該會是結合infinite scroll來載入資料
+## 說明
+嘗試使用`useQuery`、`useInfiniteQuery`、`InfiniteScroll`來製作簡易的寶可夢圖鑑，在撰寫前先用了原生的Intersection Obderver API製作[DEMO](https://codesandbox.io/s/intersection-observer-using-react-nehr3k)，後來發現`useQuery`、`useInfiniteQuery`、`InfiniteScroll`很輕鬆的解決邏輯上的問題。
 
-### Hook
-```
-useQuery、useInfiniteQuery、InfiniteScroll
-```
 
-### API
+## API
 ```
 https://pokeapi.co/
 ```
 
-### 參考資料
+## 參考資料
 [[JS] 使用 JavaScript 解析網址與處理網址中的參數（URL Parameters）](https://pjchender.blogspot.com/2018/08/js-javascript-url-parameters.html)  
 [InfiniteScroll](https://pjchender.dev/npm/npm-react-query/#infinite-queries)  
 [useInfiniteQuery](https://tanstack.com/query/v4/docs/react/reference/useInfiniteQuery)  
