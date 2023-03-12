@@ -12,7 +12,9 @@ export default function Pokemon({ pokemon }) {
     isLoading,
     isError,
     isSuccess,
-  } = useQuery(["pokemonInfo", url], () => fetchData(url));
+  } = useQuery(["pokemonInfo", url], () => fetchData(url), {
+    enabled: !!url,
+  });
 
   const speciesURL = pokemonData?.species.url;
 
@@ -21,7 +23,9 @@ export default function Pokemon({ pokemon }) {
     isLoading: speciesIsLoading,
     isError: speciesIsError,
     isSuccess: speciesIsSuccess,
-  } = useQuery(["pokemonDetail", speciesURL], () => fetchData(speciesURL));
+  } = useQuery(["pokemonDetail", speciesURL], () => fetchData(speciesURL), {
+    enabled: !!speciesURL,
+  });
   if (isLoading || speciesIsLoading) return <Loading />;
   if (isError || speciesIsError) return "Error";
 
